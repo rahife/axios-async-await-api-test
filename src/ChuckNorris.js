@@ -13,6 +13,7 @@ async function getFact(
   }
 };
 
+// TODO: this function is not used
 async function printFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
