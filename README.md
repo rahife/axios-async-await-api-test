@@ -25,7 +25,7 @@ $ npm test &&  npm start
 ```
 $ npm test && npm start
 
-> axios-async-await-api-test@1.0.0 test ~/workspace/chuck-norris-api-test
+> axios-async-await-api-test@1.0.0 test ~/workspace/project-dir
 > mocha ./test/*test.js
 
 
@@ -40,7 +40,7 @@ PRINT FACT: Michelle Obama twerks only for Chuck Norris.
   2 passing (3s)
 
 
-> axios-async-await-api-test@1.0.0 start ~/workspace/chuck-norris-api-test
+> axios-async-await-api-test@1.0.0 start ~/workspace/project-dir
 > node ./src/main.js
 
 PRINT FACT: Chuck Norris knows what you did last winter.
