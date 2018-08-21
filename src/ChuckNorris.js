@@ -1,6 +1,7 @@
-const axios = require("axios");
+// const axios = require("axios");
+import { axios } from "axios";
 
-async function getFact(
+export async function getFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
   try {
@@ -13,7 +14,7 @@ async function getFact(
   }
 };
 
-async function printFact(
+export async function printFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
   try {
@@ -26,7 +27,7 @@ async function printFact(
   }
 };
 
-module.exports = {
-  getFact: getFact,
-  printFact: printFact
-};
+// module.exports = {
+//   getFact: getFact,
+//   printFact: printFact
+// };
