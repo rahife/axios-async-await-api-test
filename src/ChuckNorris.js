@@ -1,8 +1,4 @@
 const axios = require("axios");
-
-const url =
-  "https://api.chucknorris.io/jokes/random";
-
   
 async function getFact(
   url = 'https://api.chucknorris.io/jokes/random'
@@ -24,4 +20,4 @@ async function printFact(
   console.log(`Here the fact: ${fact}`);
 };
 
-module.exports = printFact;
+module.exports = getFact;
