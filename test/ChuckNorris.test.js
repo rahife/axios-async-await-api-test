@@ -1,3 +1,4 @@
+// TODO: change require's for import's es6 style
 const getChuckNorrisFact = require('../src/ChuckNorris').getFact;
 const printChucNorrisFact = require('../src/ChuckNorris').printFact;
 const expect = require('chai').expect;
