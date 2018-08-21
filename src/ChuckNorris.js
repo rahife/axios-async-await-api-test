@@ -1,5 +1,5 @@
 const axios = require("axios");
-  
+
 async function getFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
@@ -16,11 +16,17 @@ async function getFact(
 async function printFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
-  const fact = await getFact(url);
-  console.log(`PRINT ${fact}`);
+  try {
+    const fact = await getFact(url);
+    console.log(`PRINT ${fact}`);
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
 };
 
 module.exports = {
   getFact: getFact,
   printFact: printFact
-}; 
+};
