@@ -1,33 +1,27 @@
-const https = require('https');
+const axios = require("axios");
 
-// FIXME: this approach doesn not work.
-export class ChuckNorris {
+const url =
+  "https://api.chucknorris.io/jokes/random";
 
-  constructor() {
-    this.chuckNorrisFact = null;
-    this.cacheFact();
+  
+async function getFact(
+  url = 'https://api.chucknorris.io/jokes/random'
+) {
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+    return `Fact: ${data.value}`;
+  } catch (error) {
+    console.log(error);
+    return 'ERROR'
   }
+};
 
-  getFact(){
-    return this.chuckNorrisFact;
-  }
-  cacheFact() {   
-    https.get('https://api.chucknorris.io/jokes/random', (resp) => {
-      let data = '';
-  
-      // A chunk of data has been recieved.
-      resp.on('data', (chunk) => {
-        data += chunk;
-      });
-  
-      // The whole response has been received. Print out the result.
-      resp.on('end', () => {
-        console.log(JSON.parse(data).value);
-        this.chuckNorrisFact = JSON.parse(data).value;
-      });
-  
-    }).on("error", (err) => {
-      console.log("Error: " + err.message);
-    });
-  }
-}
+async function printFact(
+  url = 'https://api.chucknorris.io/jokes/random'
+) {
+  const fact = await getFact(url);
+  console.log(`Here the fact: ${fact}`);
+};
+
+module.exports = printFact;

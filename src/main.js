@@ -1,5 +1,3 @@
-import { ChuckNorris } from "./ChuckNorris";
+const printChuckNorrisFact = require('./ChuckNorris');
 
-let chuckNorrisFact = new ChuckNorris();
-
-console.log(chuckNorrisFact.getFact());
+printChuckNorrisFact();
