@@ -1,21 +1,47 @@
-#CHUCK NORRIS API TEST
+# AXIOS API CALL AND TEST WITH ASYNC/ AWAIT
 
-El objetivo de este mini proyecto es aprender como trabajar con llamadas asíncronas para aplicarlo en ehealthscanner.
+This is an api call exercise with unit test using axios, mocha, chai and async/ await.
 
-Los objetivos, más concretamente son:
+I use this funny free API:
 
-- Hacer una llamada a una API de terceros.
-- Testear que se ha recibido lo que se esperaba.
+- api.chucknorris.io
 
-Para ello estoy usando esta API libre: api.chucknorris.io
+### Environment
 
-### Work In Progress
+Tested in Ubuntu 18 with:
 
-Estoy haciendo pruebas con callbacks y promises. De momento no funciona.
+- node: 8.11.3
+- npm: 6.3.0
 
-#### TODO
+### How to run it
 
-- Investigar esto:
-    - https://www.tutorialspoint.com/es6/es6_promises.htm
-    - https://github.com/rahife/awesome-promises
-    - https://www.valentinog.com/blog/http-requests-node-js-async-await/
+```
+$ npm install
+$ npm test &&  npm start
+```
+
+### Example
+
+```
+$ npm test && npm start
+
+> axios-async-await-api-test@1.0.0 test ~/workspace/chuck-norris-api-test
+> mocha ./test/*test.js
+
+
+
+  Testing Chuck Norris facts
+FACT: If Chuck Norris ever allowed a sports team to be named after him, that team would never lose again...except when Chuck Norris played against it.
+    ✓ Receives a fact (1467ms)
+PRINT FACT: Michelle Obama twerks only for Chuck Norris.
+    ✓ Prints a fact (1727ms)
+
+
+  2 passing (3s)
+
+
+> axios-async-await-api-test@1.0.0 start ~/workspace/chuck-norris-api-test
+> node ./src/main.js
+
+PRINT FACT: Chuck Norris knows what you did last winter.
+```
