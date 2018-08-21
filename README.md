@@ -18,3 +18,4 @@ Estoy haciendo pruebas con callbacks y promises. De momento no funciona.
 - Investigar esto:
     - https://www.tutorialspoint.com/es6/es6_promises.htm
     - https://github.com/rahife/awesome-promises
+    - https://www.valentinog.com/blog/http-requests-node-js-async-await/
