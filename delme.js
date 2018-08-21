@@ -1,17 +1,21 @@
 const axios = require("axios");
 const url =
-  "https://maps.googleapis.com/maps/api/geocode/json?address=Florence";
-const getLocation = async url => {
+  "https://api.chucknorris.io/jokes/random";
+
+async function getFact(url) {
   try {
     const response = await axios.get(url);
     const data = response.data;
-    console.log(
-      `City: ${data.results[0].formatted_address} -`,
-      `Latitude: ${data.results[0].geometry.location.lat} -`,
-      `Longitude: ${data.results[0].geometry.location.lng}`
-    );
+    return `Fact: ${data.value}`;
   } catch (error) {
     console.log(error);
+    return 'ERROR'
   }
 };
-getLocation(url);
+
+async function printFact() {
+  const fact = await getFact(url);
+  console.log(`Here the fact: ${fact}`);
+}
+
+printFact();
