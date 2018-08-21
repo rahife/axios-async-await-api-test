@@ -1,7 +1,6 @@
 const getChuckNorrisFact = require('../src/ChuckNorris').getFact;
 const expect = require('chai').expect;
 
-
 describe('Testing Chuck Norris facts', function() {
     it('Receive a fact', function(done) {
         let chuckFact;
