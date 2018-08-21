@@ -1,4 +1,4 @@
-const getChuckNorrisFact = require('../src/ChuckNorris');
+const getChuckNorrisFact = require('../src/ChuckNorris').getFact;
 const expect = require('chai').expect;
 
 

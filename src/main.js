@@ -1,3 +1,3 @@
-const printChuckNorrisFact = require('./ChuckNorris');
+const printChuckNorrisFact = require('./ChuckNorris').printFact;
 
 printChuckNorrisFact();

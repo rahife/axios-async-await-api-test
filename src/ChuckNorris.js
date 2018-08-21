@@ -6,19 +6,21 @@ async function getFact(
   try {
     const response = await axios.get(url);
     const data = response.data;
-    return `Fact: ${data.value}`;
+    return `FACT: ${data.value}`;
   } catch (error) {
     console.log(error);
     return 'ERROR'
   }
 };
 
-// TODO: this function is not used
 async function printFact(
   url = 'https://api.chucknorris.io/jokes/random'
 ) {
   const fact = await getFact(url);
-  console.log(`Here the fact: ${fact}`);
+  console.log(`PRINT ${fact}`);
 };
 
-module.exports = getFact;
+module.exports = {
+  getFact: getFact,
+  printFact: printFact
+}; 
