@@ -11,7 +11,7 @@ describe('Testing Chuck Norris facts', function () {
       expect(chuckFact).to.contain('Chuck Norris');
       done();
     })();
-  });
+  }).timeout(4000);
 
   it('Prints a fact', function (done) {
     let result;
@@ -20,5 +20,5 @@ describe('Testing Chuck Norris facts', function () {
       expect(result).to.be.true;
       done();
     })();
-  });
+  }).timeout(4000);
 });
