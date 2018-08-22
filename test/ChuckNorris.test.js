@@ -14,6 +14,7 @@ describe("Testing Chuck Norris facts", function() {
       expecting(chuckFact).to.contain("Chuck Norris");
       done();
     })();
+    // default timeout is 2s (2000ms) 
   }).timeout(4000);
 
   it("Prints a fact", function(done) {
