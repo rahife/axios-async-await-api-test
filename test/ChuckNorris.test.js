@@ -15,7 +15,7 @@ describe("Testing Chuck Norris facts", function() {
       done();
     })();
     // default timeout is 2s (2000ms) 
-  }).timeout(4000);
+  }).timeout(6000);
 
   it("Prints a fact", function(done) {
     let result;
@@ -24,5 +24,5 @@ describe("Testing Chuck Norris facts", function() {
       expecting(result).to.be.true;
       done();
     })();
-  }).timeout(4000);
+  }).timeout(6000);
 });

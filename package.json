@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./compiled-src/src/main.js",
-    "test": "npm run compile && mocha ./compiled-src/test/*test.js",
+    "test": "npm run compile && ./node_modules/mocha/bin/_mocha ./compiled-src/test/*test.js",
     "compile": "./node_modules/typescript/bin/tsc",
-    "clean": "rm -rf ./node_modules ./lib"
+    "clean": "git checkout . && git clean -f && rm -rf ./node_modules ./lib"
   },
   "author": "",
   "license": "ISC",
