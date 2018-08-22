@@ -1,22 +1,21 @@
-// const axios = require("axios");
-import { axios } from "axios";
+import axios from "axios";
 
 export async function getFact(
-  url = 'https://api.chucknorris.io/jokes/random'
-) {
+  url = "https://api.chucknorris.io/jokes/random"
+  ) {
   try {
     const response = await axios.get(url);
     const data = response.data;
     return `FACT: ${data.value}`;
   } catch (error) {
     console.log(error);
-    return 'ERROR'
+    return "ERROR";
   }
-};
+}
 
 export async function printFact(
-  url = 'https://api.chucknorris.io/jokes/random'
-) {
+  url = "https://api.chucknorris.io/jokes/random"
+  ) {
   try {
     const fact = await getFact(url);
     console.log(`PRINT ${fact}`);
@@ -25,9 +24,4 @@ export async function printFact(
     console.log(error);
     return false;
   }
-};
-
-// module.exports = {
-//   getFact: getFact,
-//   printFact: printFact
-// };
+}

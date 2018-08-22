@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/main.js",
-    "test": "mocha ./test/*test.js",
-    "compile": "./node_modules/typescript/bin/tsc --p ./tsconfig.json",
+    "start": "node ./compiled-src/src/main.js",
+    "test": "npm run compile && mocha ./compiled-src/test/*test.js",
+    "compile": "./node_modules/typescript/bin/tsc",
     "clean": "rm -rf ./node_modules ./lib"
   },
   "author": "",

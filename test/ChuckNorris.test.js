@@ -1,24 +1,26 @@
-// TODO: change require's for import's es6 style
-const getChuckNorrisFact = require('../src/ChuckNorris').getFact;
-const printChucNorrisFact = require('../src/ChuckNorris').printFact;
-const expect = require('chai').expect;
+import { getFact, printFact } from "../src/ChuckNorris";
+import { expect } from "chai";
 
-describe('Testing Chuck Norris facts', function () {
-  it('Receives a fact', function (done) {
+const getChuckNorrisFact = getFact;
+const printChucNorrisFact = printFact;
+const expecting = expect;
+
+describe("Testing Chuck Norris facts", function() {
+  it("Receives a fact", function(done) {
     let chuckFact;
     (async () => {
       chuckFact = await getChuckNorrisFact();
       console.log(chuckFact);
-      expect(chuckFact).to.contain('Chuck Norris');
+      expecting(chuckFact).to.contain("Chuck Norris");
       done();
     })();
   }).timeout(4000);
 
-  it('Prints a fact', function (done) {
+  it("Prints a fact", function(done) {
     let result;
     (async () => {
       result = await printChucNorrisFact();
-      expect(result).to.be.true;
+      expecting(result).to.be.true;
       done();
     })();
   }).timeout(4000);
