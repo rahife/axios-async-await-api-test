@@ -1,6 +1,6 @@
 # AXIOS API CALL AND TEST WITH ASYNC/ AWAIT
 
-This is an api call exercise with unit test using axios, mocha, chai and async/ await.
+This is an api call example with unit test using axios, mocha, chai and async/ await.
 
 I use this funny free API:
 
